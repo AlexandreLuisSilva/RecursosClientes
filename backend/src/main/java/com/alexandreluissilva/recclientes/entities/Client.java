@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_clientes")
+@Table(name = "tb_client")
 public class Client implements Serializable {
 	private static final long serialVersionUID = 1L;
 		
@@ -24,6 +25,9 @@ public class Client implements Serializable {
 	private Instant birthDate;
 	private Integer children;
 	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant date;
+
 	public Client() {
 	}
 
@@ -100,8 +104,4 @@ public class Client implements Serializable {
 		Client other = (Client) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
-
 }

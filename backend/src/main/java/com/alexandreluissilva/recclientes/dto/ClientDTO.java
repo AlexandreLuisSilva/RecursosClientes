@@ -2,8 +2,6 @@ package com.alexandreluissilva.recclientes.dto;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.alexandreluissilva.recclientes.entities.Client;
 
@@ -17,8 +15,6 @@ public class ClientDTO implements Serializable{
 	private Instant birthDate;
 	private Integer children;
 	
-	private List<ClientDTO> ids = new ArrayList<>();
-
 	public ClientDTO() {
 	}
 
@@ -87,15 +83,6 @@ public class ClientDTO implements Serializable{
 	public void setChildren(Integer children) {
 		this.children = children;
 	}
-	
-	public List<ClientDTO> getIds() {
-		return ids;
-	}
-
-	public void setIds(List<ClientDTO> categories) {
-		this.ids = categories;
-	}
-
 }
 
 

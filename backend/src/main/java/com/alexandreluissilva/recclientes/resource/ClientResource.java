@@ -22,7 +22,7 @@ import com.alexandreluissilva.recclientes.dto.ClientDTO;
 import com.alexandreluissilva.recclientes.services.ClientService;
 
 @RestController
-@RequestMapping(value = "/clientes")
+@RequestMapping(value = "/clients")
 public class ClientResource {
 
 	@Autowired
